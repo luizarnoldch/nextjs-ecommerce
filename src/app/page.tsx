@@ -1,9 +1,15 @@
-import Image from "next/image";
+import { HelloFromTurso } from '@/actions/example/hello'
+import React from 'react'
 
-export default function Home() {
+type Props = {}
+
+const Home = async (props: Props) => {
+
+  const hello = await HelloFromTurso()
   return (
-    <section className="bg-primary">
-      MAIN
-    </section>
-  );
+    <div>
+    </div>
+  )
 }
+
+export default Home
