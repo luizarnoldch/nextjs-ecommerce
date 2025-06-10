@@ -26,9 +26,11 @@ export default function RootLayout({
         >
           <SidebarProvider>
             <SidebarLayout />
-            <main>
+            <main className="w-full flex flex-col flex-1">
               <SidebarTrigger />
-              {children}
+              <div className="w-full h-full">
+                {children}
+              </div>
             </main>
           </SidebarProvider>
         </ThemeProvider>
