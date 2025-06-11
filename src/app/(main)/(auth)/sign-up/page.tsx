@@ -1,13 +1,14 @@
 "use client";
 
-import React from "react";
+import { useRouter } from "next/navigation";
 import { useActionState } from "react";
+
 import { signUpAction } from "@/actions/auth/sign-up";
+
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
-import { useRouter } from "next/navigation";
 
 export default function SignUpPage() {
   const router = useRouter()

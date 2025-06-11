@@ -32,12 +32,12 @@ const safeHandler = safeCreateAction(CreateUserSchema, handler);
 
 export async function signUpAction(
   prevState: ReturnType | null,
-  data: FormData
+  formData: FormData
 ): Promise<ReturnType> {
   const input: InputType = {
-    email: data.get("email")?.toString() ?? "",
-    name: data.get("name")?.toString() ?? "",
-    password: data.get("password")?.toString() ?? "",
+    email: formData.get("email")?.toString() ?? "",
+    name: formData.get("name")?.toString() ?? "",
+    password: formData.get("password")?.toString() ?? "",
 
     // Optionals
     emailVerified: undefined,
