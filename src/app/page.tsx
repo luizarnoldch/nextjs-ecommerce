@@ -1,11 +1,10 @@
-import React from 'react'
+import { redirect } from "next/navigation"
+
 
 type Props = {}
 
-const page = (props: Props) => {
-  return (
-    <div>page</div>
-  )
+const HomePage = (props: Props) => {
+  redirect("/sign-in")
 }
 
-export default page
+export default HomePage

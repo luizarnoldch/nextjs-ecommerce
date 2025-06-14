@@ -1,30 +1,14 @@
-"use client"
-import { signOut } from '@/lib/auth-client'
-import { useRouter } from 'next/navigation'
-import React from 'react'
-
 type Props = {}
 
 const DashboardPage = (props: Props) => {
-  const router = useRouter()
   return (
-    <div>
-      DashboardPage
-      <div >
-        <button className='p-4 bg-amber-700 rounded-4xl' onClick={async () => {
-          await signOut(
-            {
-              fetchOptions: {
-                onSuccess: () => {
-                  router.push("/sign-in")
-                }
-              }
-            }
-          )
-        }}>
-          LogOut
-        </button>
+    <div className="flex flex-1 flex-col gap-4 w-full h-full">
+      <div className="grid auto-rows-min gap-4 md:grid-cols-3">
+        <div className="bg-primary aspect-video rounded-xl shadow-2xl" />
+        <div className="bg-primary aspect-video rounded-xl shadow-2xl" />
+        <div className="bg-primary aspect-video rounded-xl shadow-2xl" />
       </div>
+      <div className="bg-primary shadow-2xl min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
     </div>
   )
 }

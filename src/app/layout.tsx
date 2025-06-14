@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import SidebarLayout from "@/components/modules/sidebar/templates/SidebarDashboard";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +15,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body>
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );

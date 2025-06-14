@@ -31,14 +31,14 @@ export async function signInAction(
   prevState: any,
   formData: FormData
 ): Promise<ReturnType> {
-  const data = Object.fromEntries(formData.entries());
-
-  console.log(data);
-
+  const data = Object.fromEntries(formData.entries()) as Record<
+    "email" | "password",
+    string
+  >;
   const input: InputType = {
-    email: formData.get("email")?.toString() ?? "",
-    password: formData.get("password")?.toString() ?? "",
-    name: formData.get("name")?.toString() ?? "",
+    email: data.email,
+    password: data.password,
+    name: undefined,
 
     // Optionals
     emailVerified: undefined,

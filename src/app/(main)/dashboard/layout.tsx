@@ -1,6 +1,8 @@
-import SidebarDashboard from "@/components/modules/sidebar/templates/SidebarDashboard";
 import { ThemeProvider } from "@/components/theme-provider";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
+
+import SidebarDashboardInset from "@/components/modules/sidebar/components/SidebarDashboardInset";
+import SidebarDashboard from "@/components/modules/sidebar/templates/SidebarDashboard";
 
 export default function RootLayout({
   children,
@@ -16,12 +18,9 @@ export default function RootLayout({
     >
       <SidebarProvider>
         <SidebarDashboard />
-        <main className="w-full flex flex-col flex-1">
-          <SidebarTrigger />
-          <div className="w-full h-full">
-            {children}
-          </div>
-        </main>
+        <SidebarDashboardInset>
+          {children}
+        </SidebarDashboardInset>
       </SidebarProvider>
     </ThemeProvider>
   );

@@ -10,7 +10,7 @@ const SidebarDashboardHeader = (props: Props) => {
     <SidebarHeader>
       <SidebarMenu>
         <SidebarMenuItem>
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <SidebarMenuButton>
                 Select Workspace
@@ -25,7 +25,8 @@ const SidebarDashboardHeader = (props: Props) => {
                 <span>Acme Corp.</span>
               </DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
+          <h3 className='text-center text-2xl font-semibold'>Atomic Ecommerce</h3>
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarHeader>

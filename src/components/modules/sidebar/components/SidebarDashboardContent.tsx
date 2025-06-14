@@ -1,42 +1,50 @@
-import { SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar'
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
-import React from 'react'
+import { FoldersIcon, Home, StoreIcon } from "lucide-react";
+
+import {
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "@/components/ui/sidebar";
 
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/dashboard",
     icon: Home,
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
+    title: "Products",
+    url: "/dashboard/products",
+    icon: StoreIcon,
   },
   {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
+    title: "Categories",
+    url: "/dashboard/categories",
+    icon: FoldersIcon,
   },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
-  },
-]
+  // {
+  //   title: "Search",
+  //   url: "#",
+  //   icon: Search,
+  // },
+  // {
+  //   title: "Settings",
+  //   url: "#",
+  //   icon: Settings,
+  // },
+];
 
-type Props = {}
+type Props = {};
 
 const SidebarDashboardContent = (props: Props) => {
   return (
     <SidebarContent>
       <SidebarGroup>
-        <SidebarGroupLabel>Application</SidebarGroupLabel>
+        <SidebarGroupLabel>Store</SidebarGroupLabel>
         <SidebarGroupContent>
           <SidebarMenu>
             {items.map((item) => (
@@ -53,7 +61,7 @@ const SidebarDashboardContent = (props: Props) => {
         </SidebarGroupContent>
       </SidebarGroup>
     </SidebarContent>
-  )
-}
+  );
+};
 
-export default SidebarDashboardContent
+export default SidebarDashboardContent;
