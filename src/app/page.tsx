@@ -1,15 +1,10 @@
-import { HelloFromTurso } from '@/actions/example/hello'
-import React from 'react'
+import { redirect } from "next/navigation"
+
 
 type Props = {}
 
-const Home = async (props: Props) => {
-
-  const hello = await HelloFromTurso()
-  return (
-    <div>
-    </div>
-  )
+const HomePage = (props: Props) => {
+  redirect("/sign-in")
 }
 
-export default Home
+export default HomePage
