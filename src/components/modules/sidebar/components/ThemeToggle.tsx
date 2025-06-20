@@ -21,13 +21,13 @@ const ThemeToggle = (props: Props) => {
       {isDark ? (
         <MoonIcon
           className={`
-          h-5 w-5 transition-transform 
+          size-4 transition-transform 
           ${isDark ? "scale-100 rotate-0" : "scale-0 rotate-90"}`}
         />
       ) : (
         <Sun
           className={`
-            h-5 w-5 transition-transform 
+            size-4 transition-transform 
             ${isDark ? "scale-0 -rotate-90" : "scale-100 rotate-0"}`}
         />
       )}
@@ -36,7 +36,7 @@ const ThemeToggle = (props: Props) => {
         checked={isDark}
         onCheckedChange={handleToggle}
         aria-label="Toggle theme"
-        className="h-6 w-9"
+        className="h-6 w-12"
       />
 
       <Label htmlFor="theme-toggle" className="sr-only">

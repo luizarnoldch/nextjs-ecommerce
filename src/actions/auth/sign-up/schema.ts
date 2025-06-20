@@ -3,7 +3,7 @@ import {
   createSelectSchema,
   createUpdateSchema,
 } from "drizzle-zod";
-import { user } from "@/db/auth";
+import { user } from "@/db/schemas/auth";
 import { z } from "zod/v4";
 
 const passwordSchema = z

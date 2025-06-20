@@ -21,8 +21,6 @@ const LogoutButton = (props: Props) => {
     }}>
       <LogOutIcon /><span>Sign out</span>
     </button>
-
-
   )
 }
 

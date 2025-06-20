@@ -4,7 +4,7 @@ import type { Config } from "drizzle-kit";
 
 const config: Config = {
   out: "./db/migrations",
-  schema: "./db",
+  schema: "./db/schemas",
   dialect: "turso",
   dbCredentials: {
     url: `${process.env.TURSO_DATABASE_URL || process.env.DATABASE_URL}`,

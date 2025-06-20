@@ -12,7 +12,7 @@ bun add drizzle-orm @libsql/client drizzle-zod zod
 bun add -D drizzle-kit
 bun add better-auth
 
-bunx @better-auth/cli@latest generate --config ./src/lib/auth.ts --output ./db/auth.ts --y
+bunx @better-auth/cli@latest generate --config ./src/lib/auth.ts --output ./db/schemas/auth.ts --y
 bunx drizzle-kit generate --name=init_better_auth
 bunx drizzle-kit migrate # apply the migration
 

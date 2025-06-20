@@ -7,4 +7,4 @@ export const db = drizzle({
   },
 });
 
-export * from "./auth";
+export * from "./schemas/auth";
