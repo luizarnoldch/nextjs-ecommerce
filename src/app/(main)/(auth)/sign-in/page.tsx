@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
-import { useActionState } from "react";
-import { signInAction } from "@/actions/auth/sign-in";
 import { useRouter } from "next/navigation";
+import { useActionState, useEffect } from "react";
+
+import { signInAction } from "@/actions/auth/sign-in";
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/button";
 
 export default function SignInPage() {
   const router = useRouter();
-  // [state, performAction, isPending]
   const [state, useSignInAction, isPending] = useActionState(signInAction, null);
 
   // Extraemos errores
@@ -22,9 +21,14 @@ export default function SignInPage() {
   const emailHasError = (fieldErrors.email?.length ?? 0) > 0;
   const passwordHasError = (fieldErrors.password?.length ?? 0) > 0;
 
-  const handleSignIn = (formData: FormData) => {
-    useSignInAction(formData);
-    router.push("/dashboard");
+  useEffect(() => {
+    if (state?.data) {
+      router.push("/dashboard");
+    }
+  }, [state, router]);
+
+  const handleSignIn = (form: FormData) => {
+    useSignInAction(form);
   };
 
   return (

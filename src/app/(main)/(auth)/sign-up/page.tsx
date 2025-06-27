@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 
 import { signUpAction } from "@/actions/auth/sign-up";
 
@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 
 export default function SignUpPage() {
-  const router = useRouter()
+  const router = useRouter();
   const [state, useSignUpAction, isPending] = useActionState(signUpAction, null);
 
   // Extraemos para comodidad y evitar problemas con undefined
@@ -22,9 +22,14 @@ export default function SignUpPage() {
   const nameHasError = (fieldErrors.name?.length ?? 0) > 0;
   const passwordHasError = (fieldErrors.password?.length ?? 0) > 0;
 
+  useEffect(() => {
+    if (state?.data) {
+      router.push("/dashboard");
+    }
+  }, [state, router]);
+
   const handleSignUp = (form: FormData) => {
     useSignUpAction(form)
-    router.push("/dashboard")
   }
 
   return (
