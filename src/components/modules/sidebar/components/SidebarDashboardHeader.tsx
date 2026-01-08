@@ -1,16 +1,26 @@
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
-import { SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar'
-import { ChevronDown } from 'lucide-react'
-import React from 'react'
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+	SidebarHeader,
+	SidebarMenu,
+	SidebarMenuButton,
+	SidebarMenuItem,
+} from "@/components/ui/sidebar";
+import { ChevronDown } from "lucide-react";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const SidebarDashboardHeader = (props: Props) => {
-  return (
-    <SidebarHeader>
-      <SidebarMenu>
-        <SidebarMenuItem>
-          {/* <DropdownMenu>
+	return (
+		<SidebarHeader>
+			<SidebarMenu>
+				<SidebarMenuItem>
+					{/* <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <SidebarMenuButton>
                 Select Workspace
@@ -26,11 +36,13 @@ const SidebarDashboardHeader = (props: Props) => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu> */}
-          <h3 className='text-center text-2xl font-semibold'>Atomic Ecommerce</h3>
-        </SidebarMenuItem>
-      </SidebarMenu>
-    </SidebarHeader>
-  )
-}
+					<h3 className="text-center text-2xl font-semibold">
+						Atomic Ecommerce
+					</h3>
+				</SidebarMenuItem>
+			</SidebarMenu>
+		</SidebarHeader>
+	);
+};
 
-export default SidebarDashboardHeader
+export default SidebarDashboardHeader;

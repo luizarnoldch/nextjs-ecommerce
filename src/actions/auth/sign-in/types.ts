@@ -7,7 +7,7 @@ import { CreateUserSchema, SelectUserSchema } from "./schema";
 export type InputType = z.infer<typeof CreateUserSchema>;
 
 export type UserType = Omit<z.infer<typeof SelectUserSchema>, "image"> & {
-  image: string | null | undefined;
+	image: string | null | undefined;
 };
 
 export type ReturnType = ActionState<InputType, UserType>;

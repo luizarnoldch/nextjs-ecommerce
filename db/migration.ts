@@ -5,9 +5,9 @@ import { migrate } from "drizzle-orm/libsql/migrator";
 import { db } from ".";
 
 (async () => {
-  console.log("Runnign migrations ...");
-  await migrate(db, {
-    migrationsFolder: path.join(__dirname, "./migrations"),
-  });
-  console.log("Migrations ran successfully");
+	console.log("Runnign migrations ...");
+	await migrate(db, {
+		migrationsFolder: path.join(__dirname, "./migrations"),
+	});
+	console.log("Migrations ran successfully");
 })();

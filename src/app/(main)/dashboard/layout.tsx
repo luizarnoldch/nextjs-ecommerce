@@ -5,23 +5,21 @@ import SidebarDashboardInset from "@/components/modules/sidebar/components/Sideb
 import SidebarDashboard from "@/components/modules/sidebar/templates/SidebarDashboard";
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <SidebarProvider>
-        <SidebarDashboard />
-        <SidebarDashboardInset>
-          {children}
-        </SidebarDashboardInset>
-      </SidebarProvider>
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider
+			attribute="class"
+			defaultTheme="system"
+			enableSystem
+			disableTransitionOnChange
+		>
+			<SidebarProvider>
+				<SidebarDashboard />
+				<SidebarDashboardInset>{children}</SidebarDashboardInset>
+			</SidebarProvider>
+		</ThemeProvider>
+	);
 }

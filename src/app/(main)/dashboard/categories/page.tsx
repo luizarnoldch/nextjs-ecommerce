@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const CategoriesPage = (props: Props) => {
-  return (
-    <div>CategoriesPage</div>
-  )
-}
+	return <div>CategoriesPage</div>;
+};
 
-export default CategoriesPage
+export default CategoriesPage;

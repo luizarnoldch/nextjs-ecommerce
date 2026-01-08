@@ -1,12 +1,10 @@
-import NewProduct from '@/components/modules/products/templates/NewProduct'
-import React from 'react'
+import NewProduct from "@/components/modules/products/templates/NewProduct";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const ProductsCreation = (props: Props) => {
-  return (
-    <NewProduct />
-  )
-}
+	return <NewProduct />;
+};
 
-export default ProductsCreation
+export default ProductsCreation;
