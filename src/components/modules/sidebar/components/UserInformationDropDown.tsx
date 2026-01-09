@@ -1,6 +1,13 @@
 import { CircleUserIcon, EllipsisVerticalIcon, Settings2Icon } from 'lucide-react'
 
-import { DropdownMenu, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import {
+  DropdownMenu,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu'
 import { SidebarMenuButton } from '@/components/ui/sidebar'
 
 import LogoutButton from './LogoutButton'
@@ -14,10 +21,12 @@ const UserInformationDropDown = async (props: Props) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <SidebarMenuButton size="lg"
-          className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
+        <SidebarMenuButton
+          size='lg'
+          className='data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground'
+        >
           <UserInformation />
-          <EllipsisVerticalIcon className="" />
+          <EllipsisVerticalIcon className='' />
         </SidebarMenuButton>
       </DropdownMenuTrigger>
       <UserInforamtionDropDownContent>
@@ -29,11 +38,13 @@ const UserInformationDropDown = async (props: Props) => {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <CircleUserIcon /><span>Account</span>
+            <CircleUserIcon />
+            <span>Account</span>
           </DropdownMenuItem>
           <ThemeToggle />
           <DropdownMenuItem>
-            <Settings2Icon /><span>Settings</span>
+            <Settings2Icon />
+            <span>Settings</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />

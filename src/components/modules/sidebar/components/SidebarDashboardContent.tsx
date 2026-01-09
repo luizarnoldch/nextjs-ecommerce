@@ -1,5 +1,13 @@
-import React from "react";
-import { BookOpen, BotIcon, ChevronRightIcon, HomeIcon, Settings2, ShoppingCartIcon, SquareTerminalIcon } from "lucide-react";
+import React from 'react'
+import {
+  BookOpen,
+  BotIcon,
+  ChevronRightIcon,
+  HomeIcon,
+  Settings2,
+  ShoppingCartIcon,
+  SquareTerminalIcon
+} from 'lucide-react'
 import {
   SidebarContent,
   SidebarGroup,
@@ -10,26 +18,24 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarMenuSubButton,
-  SidebarMenuSubItem,
-} from "@/components/ui/sidebar";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+  SidebarMenuSubItem
+} from '@/components/ui/sidebar'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 
 // Define the shape of sub-items
 interface SidebarSubItem {
-  title: string;
-  url: string;
+  title: string
+  url: string
 }
 
 // Define the shape of top-level items
 interface SidebarItem {
-  title: string;
-  url: string;
-  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  isActive?: boolean;
-  items?: SidebarSubItem[];
+  title: string
+  url: string
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  isActive?: boolean
+  items?: SidebarSubItem[]
 }
-
-
 
 const items: SidebarItem[] = [
   {
@@ -40,8 +46,8 @@ const items: SidebarItem[] = [
     items: [
       { title: 'Analytics', url: '/dashboard' },
       { title: 'Starred', url: '#' },
-      { title: 'Settings', url: '#' },
-    ],
+      { title: 'Settings', url: '#' }
+    ]
   },
   {
     title: 'Products',
@@ -50,8 +56,8 @@ const items: SidebarItem[] = [
     isActive: false,
     items: [
       { title: 'Gallery', url: '/dashboard/products' },
-      { title: 'New Products', url: '/dashboard/products/create' },
-    ],
+      { title: 'New Products', url: '/dashboard/products/create' }
+    ]
   },
   {
     title: 'Documentation',
@@ -62,8 +68,8 @@ const items: SidebarItem[] = [
       { title: 'Introduction', url: '#' },
       { title: 'Get Started', url: '#' },
       { title: 'Tutorials', url: '#' },
-      { title: 'Changelog', url: '#' },
-    ],
+      { title: 'Changelog', url: '#' }
+    ]
   },
   {
     title: 'Settings',
@@ -74,10 +80,10 @@ const items: SidebarItem[] = [
       { title: 'General', url: '#' },
       { title: 'Team', url: '#' },
       { title: 'Billing', url: '#' },
-      { title: 'Limits', url: '#' },
-    ],
-  },
-];
+      { title: 'Limits', url: '#' }
+    ]
+  }
+]
 
 type SidebarDashboardContentProps = {}
 
@@ -88,24 +94,24 @@ const SidebarDashboardContent: React.FC<SidebarDashboardContentProps> = () => {
         <SidebarGroupLabel>Store</SidebarGroupLabel>
         <SidebarGroupContent>
           <SidebarMenu>
-            {items.map((item) => (
+            {items.map(item => (
               <Collapsible
                 key={item.title}
                 asChild
                 defaultOpen={Boolean(item.isActive)}
-                className="group/collapsible"
+                className='group/collapsible'
               >
                 <SidebarMenuItem>
                   <CollapsibleTrigger asChild>
                     <SidebarMenuButton tooltip={item.title}>
                       {item.icon && <item.icon />}
                       <span>{item.title}</span>
-                      <ChevronRightIcon className="ml-auto transition-transform duration-300 group-data-[state=open]/collapsible:rotate-90" />
+                      <ChevronRightIcon className='ml-auto transition-transform duration-300 group-data-[state=open]/collapsible:rotate-90' />
                     </SidebarMenuButton>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
                     <SidebarMenuSub>
-                      {item.items?.map((subItem) => (
+                      {item.items?.map(subItem => (
                         <SidebarMenuSubItem key={subItem.title}>
                           <SidebarMenuSubButton asChild>
                             <a href={subItem.url}>
@@ -123,7 +129,7 @@ const SidebarDashboardContent: React.FC<SidebarDashboardContentProps> = () => {
         </SidebarGroupContent>
       </SidebarGroup>
     </SidebarContent>
-  );
-};
+  )
+}
 
-export default SidebarDashboardContent;
+export default SidebarDashboardContent

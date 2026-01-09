@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { DropdownMenuContent } from '@/components/ui/dropdown-menu'
 import { useSidebar } from '@/components/ui/sidebar'
@@ -8,13 +8,12 @@ type UserInforamtionDropDownContentProps = {
 }
 
 const UserInforamtionDropDownContent = ({ children }: UserInforamtionDropDownContentProps) => {
-
   const { isMobile } = useSidebar()
   return (
     <DropdownMenuContent
-      className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
-      side={isMobile ? "bottom" : "right"}
-      align="end"
+      className='w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg'
+      side={isMobile ? 'bottom' : 'right'}
+      align='end'
       sideOffset={4}
     >
       {children}

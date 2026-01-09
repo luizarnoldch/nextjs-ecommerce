@@ -23,7 +23,11 @@ const UserInformation = async (props: UserInformationProps) => {
   return (
     <>
       <Avatar className='size-8 rounded-lg'>
-        <AvatarImage className='' src={session?.user.image ?? ""} alt={session?.user.name} />
+        <AvatarImage
+          className=''
+          src={session?.user.image ?? ''}
+          alt={session?.user.name}
+        />
         <AvatarFallback className='rounded-lg'>{initials}</AvatarFallback>
       </Avatar>
       <div className='grid flex-1 w-4/5 text-sm leading-tight text-left'>

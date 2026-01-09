@@ -105,12 +105,8 @@
           "name": "auth_account_user_id_auth_user_id_fk",
           "tableFrom": "auth_account",
           "tableTo": "auth_user",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -182,9 +178,7 @@
       "indexes": {
         "auth_session_token_unique": {
           "name": "auth_session_token_unique",
-          "columns": [
-            "token"
-          ],
+          "columns": ["token"],
           "isUnique": true
         }
       },
@@ -193,12 +187,8 @@
           "name": "auth_session_user_id_auth_user_id_fk",
           "tableFrom": "auth_session",
           "tableTo": "auth_user",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -263,9 +253,7 @@
       "indexes": {
         "auth_user_email_unique": {
           "name": "auth_user_email_unique",
-          "columns": [
-            "email"
-          ],
+          "columns": ["email"],
           "isUnique": true
         }
       },
@@ -350,12 +338,8 @@
           "name": "product_categories_product_id_products_product_id_fk",
           "tableFrom": "product_categories",
           "tableTo": "products",
-          "columnsFrom": [
-            "product_id"
-          ],
-          "columnsTo": [
-            "product_id"
-          ],
+          "columnsFrom": ["product_id"],
+          "columnsTo": ["product_id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -363,22 +347,15 @@
           "name": "product_categories_category_id_product_categories_category_id_fk",
           "tableFrom": "product_categories",
           "tableTo": "product_categories",
-          "columnsFrom": [
-            "category_id"
-          ],
-          "columnsTo": [
-            "category_id"
-          ],
+          "columnsFrom": ["category_id"],
+          "columnsTo": ["category_id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
       },
       "compositePrimaryKeys": {
         "product_categories_product_id_category_id_pk": {
-          "columns": [
-            "product_id",
-            "category_id"
-          ],
+          "columns": ["product_id", "category_id"],
           "name": "product_categories_product_id_category_id_pk"
         }
       },
@@ -420,10 +397,7 @@
       "indexes": {
         "product_attributes_product_id_attribute_name_unique": {
           "name": "product_attributes_product_id_attribute_name_unique",
-          "columns": [
-            "product_id",
-            "attribute_name"
-          ],
+          "columns": ["product_id", "attribute_name"],
           "isUnique": true
         }
       },
@@ -432,12 +406,8 @@
           "name": "product_attributes_product_id_products_product_id_fk",
           "tableFrom": "product_attributes",
           "tableTo": "products",
-          "columnsFrom": [
-            "product_id"
-          ],
-          "columnsTo": [
-            "product_id"
-          ],
+          "columnsFrom": ["product_id"],
+          "columnsTo": ["product_id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -496,9 +466,7 @@
       "indexes": {
         "product_variants_sku_unique": {
           "name": "product_variants_sku_unique",
-          "columns": [
-            "sku"
-          ],
+          "columns": ["sku"],
           "isUnique": true
         }
       },
@@ -507,12 +475,8 @@
           "name": "product_variants_product_id_products_product_id_fk",
           "tableFrom": "product_variants",
           "tableTo": "products",
-          "columnsFrom": [
-            "product_id"
-          ],
-          "columnsTo": [
-            "product_id"
-          ],
+          "columnsFrom": ["product_id"],
+          "columnsTo": ["product_id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
