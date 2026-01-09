@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,35 +8,35 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator
-} from '@/components/ui/breadcrumb'
-import { Separator } from '@/components/ui/separator'
-import { SidebarInset, SidebarTrigger } from '@/components/ui/sidebar'
+} from "@/components/ui/breadcrumb"
+import { Separator } from "@/components/ui/separator"
+import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar"
 
 type SidebarDashboardInsetProps = {
   children?: React.ReactNode
 }
 
 const SidebarDashboardInset = ({ children }: SidebarDashboardInsetProps) => {
-  const pathname = usePathname() || ''
-  const allSegments = pathname.replace(/^\/|\/$/g, '').split('/')
-  const dashIndex = allSegments.indexOf('dashboard')
+  const pathname = usePathname() || ""
+  const allSegments = pathname.replace(/^\/|\/$/g, "").split("/")
+  const dashIndex = allSegments.indexOf("dashboard")
   const segments = dashIndex >= 0 ? allSegments.slice(dashIndex) : allSegments
-  const hrefs = segments.map((_, idx) => '/' + segments.slice(0, idx + 1).join('/'))
+  const hrefs = segments.map((_, idx) => "/" + segments.slice(0, idx + 1).join("/"))
 
   return (
     <SidebarInset>
-      <header className='flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12'>
-        <div className='flex items-center gap-2 px-4'>
-          <SidebarTrigger className='-ml-1' />
+      <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
+        <div className="flex items-center gap-2 px-4">
+          <SidebarTrigger className="-ml-1" />
           <Separator
-            orientation='vertical'
-            className='mr-2 data-[orientation=vertical]:h-4'
+            orientation="vertical"
+            className="mr-2 data-[orientation=vertical]:h-4"
           />
           <Breadcrumb>
             <BreadcrumbList>
               {segments.flatMap((segment, idx) => {
                 const isLast = idx === segments.length - 1
-                const raw = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')
+                const raw = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, " ")
                 const href = hrefs[idx]
 
                 const items = [
@@ -59,7 +59,7 @@ const SidebarDashboardInset = ({ children }: SidebarDashboardInsetProps) => {
           </Breadcrumb>
         </div>
       </header>
-      <div className='w-full h-full p-4 pt-0'>{children}</div>
+      <div className="w-full h-full p-4 pt-0">{children}</div>
     </SidebarInset>
   )
 }

@@ -1,4 +1,4 @@
-import { drizzle } from 'drizzle-orm/libsql'
+import { drizzle } from "drizzle-orm/libsql"
 
 export const db = drizzle({
   connection: {
@@ -7,4 +7,4 @@ export const db = drizzle({
   }
 })
 
-export * from './schemas/auth'
+export * from "./schemas/auth"

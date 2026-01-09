@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
   BookOpen,
   BotIcon,
@@ -7,7 +7,7 @@ import {
   Settings2,
   ShoppingCartIcon,
   SquareTerminalIcon
-} from 'lucide-react'
+} from "lucide-react"
 import {
   SidebarContent,
   SidebarGroup,
@@ -19,8 +19,8 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem
-} from '@/components/ui/sidebar'
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
+} from "@/components/ui/sidebar"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 
 // Define the shape of sub-items
 interface SidebarSubItem {
@@ -39,48 +39,48 @@ interface SidebarItem {
 
 const items: SidebarItem[] = [
   {
-    title: 'Home',
-    url: '/dashboard',
+    title: "Home",
+    url: "/dashboard",
     icon: HomeIcon,
     isActive: false,
     items: [
-      { title: 'Analytics', url: '/dashboard' },
-      { title: 'Starred', url: '#' },
-      { title: 'Settings', url: '#' }
+      { title: "Analytics", url: "/dashboard" },
+      { title: "Starred", url: "#" },
+      { title: "Settings", url: "#" }
     ]
   },
   {
-    title: 'Products',
-    url: '/dashboard/products',
+    title: "Products",
+    url: "/dashboard/products",
     icon: ShoppingCartIcon,
     isActive: false,
     items: [
-      { title: 'Gallery', url: '/dashboard/products' },
-      { title: 'New Products', url: '/dashboard/products/create' }
+      { title: "Gallery", url: "/dashboard/products" },
+      { title: "New Products", url: "/dashboard/products/create" }
     ]
   },
   {
-    title: 'Documentation',
-    url: '#',
+    title: "Documentation",
+    url: "#",
     icon: BookOpen,
     isActive: false,
     items: [
-      { title: 'Introduction', url: '#' },
-      { title: 'Get Started', url: '#' },
-      { title: 'Tutorials', url: '#' },
-      { title: 'Changelog', url: '#' }
+      { title: "Introduction", url: "#" },
+      { title: "Get Started", url: "#" },
+      { title: "Tutorials", url: "#" },
+      { title: "Changelog", url: "#" }
     ]
   },
   {
-    title: 'Settings',
-    url: '#',
+    title: "Settings",
+    url: "#",
     icon: Settings2,
     isActive: false,
     items: [
-      { title: 'General', url: '#' },
-      { title: 'Team', url: '#' },
-      { title: 'Billing', url: '#' },
-      { title: 'Limits', url: '#' }
+      { title: "General", url: "#" },
+      { title: "Team", url: "#" },
+      { title: "Billing", url: "#" },
+      { title: "Limits", url: "#" }
     ]
   }
 ]
@@ -99,14 +99,14 @@ const SidebarDashboardContent: React.FC<SidebarDashboardContentProps> = () => {
                 key={item.title}
                 asChild
                 defaultOpen={Boolean(item.isActive)}
-                className='group/collapsible'
+                className="group/collapsible"
               >
                 <SidebarMenuItem>
                   <CollapsibleTrigger asChild>
                     <SidebarMenuButton tooltip={item.title}>
                       {item.icon && <item.icon />}
                       <span>{item.title}</span>
-                      <ChevronRightIcon className='ml-auto transition-transform duration-300 group-data-[state=open]/collapsible:rotate-90' />
+                      <ChevronRightIcon className="ml-auto transition-transform duration-300 group-data-[state=open]/collapsible:rotate-90" />
                     </SidebarMenuButton>
                   </CollapsibleTrigger>
                   <CollapsibleContent>

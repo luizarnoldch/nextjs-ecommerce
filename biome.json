@@ -12,7 +12,15 @@
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
-    "indentWidth": 2
+    "indentWidth": 2,
+    "attributePosition": "multiline",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "lineEnding": "lf",
+    "expand": "auto",
+    "lineWidth": 120,
+    "formatWithErrors": false,
+    "useEditorconfig": true
   },
   "linter": {
     "enabled": true,
@@ -30,9 +38,9 @@
   "javascript": {
     "formatter": {
       "enabled": true,
-      "quoteStyle": "single",
+      "quoteStyle": "double",
       "semicolons": "asNeeded",
-      "jsxQuoteStyle": "single",
+      "jsxQuoteStyle": "double",
       "arrowParentheses": "asNeeded",
       "attributePosition": "multiline",
       "bracketSameLine": false,

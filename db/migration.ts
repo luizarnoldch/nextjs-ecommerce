@@ -1,13 +1,13 @@
-import path from 'path'
+import path from "node:path"
 
-import { migrate } from 'drizzle-orm/libsql/migrator'
+import { migrate } from "drizzle-orm/libsql/migrator"
 
-import { db } from '.'
+import { db } from "."
 
 ;(async () => {
-  console.log('Runnign migrations ...')
+  console.log("Runnign migrations ...")
   await migrate(db, {
-    migrationsFolder: path.join(__dirname, './migrations')
+    migrationsFolder: path.join(__dirname, "./migrations")
   })
-  console.log('Migrations ran successfully')
+  console.log("Migrations ran successfully")
 })()
