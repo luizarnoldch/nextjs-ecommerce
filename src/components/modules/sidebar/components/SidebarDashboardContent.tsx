@@ -1,13 +1,5 @@
-import React from "react"
-import {
-  BookOpen,
-  BotIcon,
-  ChevronRightIcon,
-  HomeIcon,
-  Settings2,
-  ShoppingCartIcon,
-  SquareTerminalIcon
-} from "lucide-react"
+import { BookOpen, ChevronRightIcon, HomeIcon, Settings2, ShoppingCartIcon } from "lucide-react"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import {
   SidebarContent,
   SidebarGroup,
@@ -20,7 +12,6 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem
 } from "@/components/ui/sidebar"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 
 // Define the shape of sub-items
 interface SidebarSubItem {
@@ -85,9 +76,7 @@ const items: SidebarItem[] = [
   }
 ]
 
-type SidebarDashboardContentProps = {}
-
-const SidebarDashboardContent: React.FC<SidebarDashboardContentProps> = () => {
+const SidebarDashboardContent = () => {
   return (
     <SidebarContent>
       <SidebarGroup>

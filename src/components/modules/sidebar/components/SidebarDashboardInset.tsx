@@ -21,7 +21,7 @@ const SidebarDashboardInset = ({ children }: SidebarDashboardInsetProps) => {
   const allSegments = pathname.replace(/^\/|\/$/g, "").split("/")
   const dashIndex = allSegments.indexOf("dashboard")
   const segments = dashIndex >= 0 ? allSegments.slice(dashIndex) : allSegments
-  const hrefs = segments.map((_, idx) => "/" + segments.slice(0, idx + 1).join("/"))
+  const hrefs = segments.map((_, idx) => `/${segments.slice(0, idx + 1).join("/")}`)
 
   return (
     <SidebarInset>

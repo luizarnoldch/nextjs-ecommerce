@@ -1,8 +1,6 @@
 import { redirect } from "next/navigation"
 
-type Props = {}
-
-const HomePage = (props: Props) => {
+const HomePage = () => {
   redirect("/sign-in")
 }
 

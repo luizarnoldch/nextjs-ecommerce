@@ -1,6 +1,5 @@
-import { defineConfig } from "drizzle-kit"
-
 import type { Config } from "drizzle-kit"
+import { defineConfig } from "drizzle-kit"
 
 const config: Config = {
   out: "./db/migrations",

@@ -1,16 +1,15 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { useState } from "react"
-
-import { signIn } from "@/lib/auth-client"
-
 import { toast } from "sonner"
 
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Label } from "@/components/ui/label"
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { useRouter } from "next/navigation"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+
+import { signIn } from "@/lib/auth-client"
 
 export default function SignInPage() {
   const router = useRouter()

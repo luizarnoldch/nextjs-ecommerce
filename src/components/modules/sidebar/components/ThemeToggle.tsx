@@ -1,13 +1,11 @@
 "use client"
 
+import { MoonIcon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
-import { MoonIcon, Sun } from "lucide-react"
 
-type Props = {}
-
-const ThemeToggle = (props: Props) => {
+const ThemeToggle = () => {
   const { theme, setTheme, resolvedTheme } = useTheme()
   const currentTheme = resolvedTheme === "system" ? theme : resolvedTheme
   const isDark = currentTheme === "dark"

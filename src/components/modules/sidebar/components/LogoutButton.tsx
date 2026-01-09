@@ -1,14 +1,14 @@
 "use client"
-import { signOut } from "@/lib/auth-client"
+
 import { LogOutIcon } from "lucide-react"
 import { useRouter } from "next/navigation"
+import { signOut } from "@/lib/auth-client"
 
-type Props = {}
-
-const LogoutButton = (props: Props) => {
+const LogoutButton = () => {
   const router = useRouter()
   return (
     <button
+      type="submit"
       className="w-full justify-start items-center flex gap-2"
       onClick={async () => {
         await signOut({

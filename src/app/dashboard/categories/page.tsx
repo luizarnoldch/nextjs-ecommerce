@@ -1,8 +1,4 @@
-import React from "react"
-
-type Props = {}
-
-const CategoriesPage = (props: Props) => {
+const CategoriesPage = () => {
   return <div>CategoriesPage</div>
 }
 

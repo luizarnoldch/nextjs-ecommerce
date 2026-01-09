@@ -1,12 +1,8 @@
 import { headers } from "next/headers"
-
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { auth } from "@/lib/auth"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-
-type UserInformationProps = {}
-
-const UserInformation = async (props: UserInformationProps) => {
+const UserInformation = async () => {
   const session = await auth.api.getSession({
     headers: await headers()
   })
