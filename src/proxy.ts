@@ -1,7 +1,7 @@
 // [For current Version]
-import { auth } from "@/lib/auth"
 import { headers } from "next/headers"
-import { NextRequest, NextResponse } from "next/server"
+import { type NextRequest, NextResponse } from "next/server"
+import { auth } from "@/lib/auth"
 
 export async function proxy(request: NextRequest) {
   console.log("✅ middleware disparado en:", request.nextUrl.pathname)

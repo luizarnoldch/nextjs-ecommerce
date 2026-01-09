@@ -1,11 +1,6 @@
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar"
-import { ChevronDown } from "lucide-react"
-import React from "react"
+import { SidebarHeader, SidebarMenu, SidebarMenuItem } from "@/components/ui/sidebar"
 
-type Props = {}
-
-const SidebarDashboardHeader = (props: Props) => {
+const SidebarDashboardHeader = () => {
   return (
     <SidebarHeader>
       <SidebarMenu>

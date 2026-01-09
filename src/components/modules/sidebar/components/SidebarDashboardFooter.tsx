@@ -1,9 +1,7 @@
 import { SidebarFooter, SidebarMenu, SidebarMenuItem } from "@/components/ui/sidebar"
 import UserInformationDropDown from "./UserInformationDropDown"
 
-type Props = {}
-
-const SidebarDashboardFooter = (props: Props) => {
+const SidebarDashboardFooter = () => {
   return (
     <SidebarFooter>
       <SidebarMenu>

@@ -1,6 +1,5 @@
-import React from "react"
-import NewProductPreview from "../components/NewProductPreview"
 import ProductForm from "../components/NewProductForm"
+import NewProductPreview from "../components/NewProductPreview"
 
 const NewProduct = () => {
   return (

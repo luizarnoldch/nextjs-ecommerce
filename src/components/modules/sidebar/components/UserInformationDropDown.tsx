@@ -11,13 +11,11 @@ import {
 import { SidebarMenuButton } from "@/components/ui/sidebar"
 
 import LogoutButton from "./LogoutButton"
-import UserInformation from "./UserInformation"
 import ThemeToggle from "./ThemeToggle"
 import UserInforamtionDropDownContent from "./UserInforamtionDropDownContent"
+import UserInformation from "./UserInformation"
 
-type Props = {}
-
-const UserInformationDropDown = async (props: Props) => {
+const UserInformationDropDown = async () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

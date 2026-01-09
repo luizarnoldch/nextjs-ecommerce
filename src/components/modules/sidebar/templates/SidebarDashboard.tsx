@@ -1,11 +1,9 @@
 import { Sidebar } from "@/components/ui/sidebar"
-import SidebarDashboardHeader from "../components/SidebarDashboardHeader"
-import SidebarDashboardFooter from "../components/SidebarDashboardFooter"
 import SidebarDashboardContent from "../components/SidebarDashboardContent"
+import SidebarDashboardFooter from "../components/SidebarDashboardFooter"
+import SidebarDashboardHeader from "../components/SidebarDashboardHeader"
 
-type SidebarDashboardProps = {}
-
-const SidebarDashboard = ({}: SidebarDashboardProps) => {
+const SidebarDashboard = () => {
   return (
     <Sidebar>
       <SidebarDashboardHeader />
