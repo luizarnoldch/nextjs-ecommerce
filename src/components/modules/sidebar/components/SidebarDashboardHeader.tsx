@@ -1,7 +1,7 @@
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
-import { SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar'
-import { ChevronDown } from 'lucide-react'
-import React from 'react'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar"
+import { ChevronDown } from "lucide-react"
+import React from "react"
 
 type Props = {}
 
@@ -26,7 +26,7 @@ const SidebarDashboardHeader = (props: Props) => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu> */}
-          <h3 className='text-center text-2xl font-semibold'>Atomic Ecommerce</h3>
+          <h3 className="text-center text-2xl font-semibold">Atomic Ecommerce</h3>
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarHeader>

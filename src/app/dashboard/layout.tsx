@@ -1,8 +1,8 @@
-import { ThemeProvider } from '@/components/theme-provider'
-import { SidebarProvider } from '@/components/ui/sidebar'
+import { ThemeProvider } from "@/components/theme-provider"
+import { SidebarProvider } from "@/components/ui/sidebar"
 
-import SidebarDashboardInset from '@/components/modules/sidebar/components/SidebarDashboardInset'
-import SidebarDashboard from '@/components/modules/sidebar/templates/SidebarDashboard'
+import SidebarDashboardInset from "@/components/modules/sidebar/components/SidebarDashboardInset"
+import SidebarDashboard from "@/components/modules/sidebar/templates/SidebarDashboard"
 
 export default function RootLayout({
   children
@@ -11,8 +11,8 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider
-      attribute='class'
-      defaultTheme='system'
+      attribute="class"
+      defaultTheme="system"
       enableSystem
       disableTransitionOnChange
     >

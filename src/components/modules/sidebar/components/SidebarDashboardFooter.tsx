@@ -1,5 +1,5 @@
-import { SidebarFooter, SidebarMenu, SidebarMenuItem } from '@/components/ui/sidebar'
-import UserInformationDropDown from './UserInformationDropDown'
+import { SidebarFooter, SidebarMenu, SidebarMenuItem } from "@/components/ui/sidebar"
+import UserInformationDropDown from "./UserInformationDropDown"
 
 type Props = {}
 

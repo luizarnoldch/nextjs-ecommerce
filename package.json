@@ -11,7 +11,10 @@
     "db:local": "turso dev --db-file local-db.db",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "bun run ./db/migration.ts",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "cypress:open": "cypress open",
+    "e2e": "cypress open --e2e --browser chrome",
+    "e2e:headless": "cypress run --e2e --browser chrome --headless"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -71,6 +74,7 @@
     "@types/node": "^20.19.27",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "cypress": "^15.8.2",
     "drizzle-kit": "^0.31.8",
     "eslint": "^9.39.2",
     "eslint-config-next": "15.3.3",

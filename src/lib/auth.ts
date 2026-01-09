@@ -1,10 +1,10 @@
-import { betterAuth } from 'better-auth'
-import { drizzleAdapter } from 'better-auth/adapters/drizzle'
-import { account, db, session, user, verification } from '@/db/index'
-import { nextCookies } from 'better-auth/next-js'
+import { betterAuth } from "better-auth"
+import { drizzleAdapter } from "better-auth/adapters/drizzle"
+import { account, db, session, user, verification } from "@/db/index"
+import { nextCookies } from "better-auth/next-js"
 
 const databaseConfig = drizzleAdapter(db, {
-  provider: 'sqlite',
+  provider: "sqlite",
   schema: { account, session, user, verification }
 })
 

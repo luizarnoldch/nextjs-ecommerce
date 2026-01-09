@@ -1,5 +1,5 @@
-import NewProduct from '@/components/modules/products/templates/NewProduct'
-import React from 'react'
+import NewProduct from "@/components/modules/products/templates/NewProduct"
+import React from "react"
 
 type Props = {}
 
