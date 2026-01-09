@@ -1,9 +1,9 @@
-import { redirect } from "next/navigation";
+import { redirect } from 'next/navigation'
 
-type Props = {};
+type Props = {}
 
 const HomePage = (props: Props) => {
-	redirect("/sign-in");
-};
+  redirect('/sign-in')
+}
 
-export default HomePage;
+export default HomePage

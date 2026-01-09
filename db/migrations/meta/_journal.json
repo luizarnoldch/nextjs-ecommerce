@@ -1,20 +1,20 @@
 {
-	"version": "7",
-	"dialect": "sqlite",
-	"entries": [
-		{
-			"idx": 0,
-			"version": "6",
-			"when": 1749280195600,
-			"tag": "0000_init_better_auth",
-			"breakpoints": true
-		},
-		{
-			"idx": 1,
-			"version": "6",
-			"when": 1750402654894,
-			"tag": "0001_products_table_context",
-			"breakpoints": true
-		}
-	]
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1749280195600,
+      "tag": "0000_init_better_auth",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1750402654894,
+      "tag": "0001_products_table_context",
+      "breakpoints": true
+    }
+  ]
 }

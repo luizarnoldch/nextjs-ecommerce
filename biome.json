@@ -1,35 +1,76 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
-	"vcs": {
-		"enabled": true,
-		"clientKind": "git",
-		"useIgnoreFile": true
-	},
-	"files": {
-		"ignoreUnknown": false
-	},
-	"formatter": {
-		"enabled": true,
-		"indentStyle": "tab",
-		"indentWidth": 2
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": true
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "double"
-		}
-	},
-	"assist": {
-		"enabled": true,
-		"actions": {
-			"source": {
-				"organizeImports": "on"
-			}
-		}
-	}
+  "$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noUnknownAtRules": "off"
+      }
+    },
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "jsxQuoteStyle": "single",
+      "arrowParentheses": "asNeeded",
+      "attributePosition": "multiline",
+      "bracketSameLine": false,
+      "bracketSpacing": true,
+      "trailingCommas": "none",
+      "lineEnding": "lf",
+      "expand": "auto",
+      "lineWidth": 120,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "operatorLinebreak": "after",
+      "quoteProperties": "asNeeded"
+    }
+  },
+  "json": {
+    "formatter": {
+      "bracketSpacing": true,
+      "enabled": true,
+      "indentWidth": 2,
+      "indentStyle": "space",
+      "trailingCommas": "none",
+      "lineEnding": "lf",
+      "expand": "auto",
+      "lineWidth": 120
+    }
+  },
+  "css": {
+    "parser": {
+      "cssModules": true,
+      "tailwindDirectives": true
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  }
 }
