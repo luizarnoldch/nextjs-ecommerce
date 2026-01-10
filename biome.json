@@ -23,7 +23,7 @@
     "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2,
-    "attributePosition": "multiline",
+    "attributePosition": "auto",
     "bracketSameLine": false,
     "bracketSpacing": true,
     "lineEnding": "lf",
@@ -38,6 +38,15 @@
       "recommended": true,
       "suspicious": {
         "noUnknownAtRules": "off"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "on",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["clsx", "cva", "tw", "tw.*", "cn", "cn.*"]
+          }
+        }
       }
     },
     "domains": {

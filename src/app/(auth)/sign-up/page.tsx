@@ -43,7 +43,7 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-background p-4">
+    <div className="flex min-h-screen items-center justify-center bg-background p-4">
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle className="text-center">Crear Cuenta</CardTitle>
@@ -92,7 +92,7 @@ export default function SignUpPage() {
             {/* Botón submit */}
             <Button
               type="submit"
-              className="w-full mt-2"
+              className="mt-2 w-full"
               disabled={isLoading}
             >
               {isLoading ? "Procesando..." : "Registrarme"}

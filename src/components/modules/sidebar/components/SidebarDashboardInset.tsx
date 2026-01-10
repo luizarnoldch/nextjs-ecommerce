@@ -59,7 +59,7 @@ const SidebarDashboardInset = ({ children }: SidebarDashboardInsetProps) => {
           </Breadcrumb>
         </div>
       </header>
-      <div className="w-full h-full p-4 pt-0">{children}</div>
+      <div className="h-full w-full p-4 pt-0">{children}</div>
     </SidebarInset>
   )
 }

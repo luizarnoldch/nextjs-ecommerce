@@ -21,7 +21,7 @@ const SidebarDashboardHeader = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu> */}
-          <h3 className="text-center text-2xl font-semibold">Atomic Ecommerce</h3>
+          <h3 className="text-center font-semibold text-2xl">Atomic Ecommerce</h3>
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarHeader>

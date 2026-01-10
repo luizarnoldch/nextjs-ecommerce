@@ -3,12 +3,12 @@ import NewProductPreview from "../components/NewProductPreview"
 
 const NewProduct = () => {
   return (
-    <div className="flex flex-col xl:flex-row xl:flex-1 h-full rounded-2xl shadow-2xl p-4 gap-4">
-      <section className="xl:w-2/5 w-full">
+    <div className="flex h-full flex-col gap-4 rounded-2xl p-4 shadow-2xl xl:flex-1 xl:flex-row">
+      <section className="w-full xl:w-2/5">
         <ProductForm />
       </section>
 
-      <section className="xl:w-3/5 w-full">
+      <section className="w-full xl:w-3/5">
         <NewProductPreview />
       </section>
     </div>

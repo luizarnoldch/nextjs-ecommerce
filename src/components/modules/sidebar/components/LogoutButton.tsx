@@ -9,7 +9,7 @@ const LogoutButton = () => {
   return (
     <button
       type="submit"
-      className="w-full justify-start items-center flex gap-2"
+      className="flex w-full items-center justify-start gap-2"
       onClick={async () => {
         await signOut({
           fetchOptions: {

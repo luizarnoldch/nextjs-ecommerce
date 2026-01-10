@@ -26,7 +26,7 @@ const UserInformation = async () => {
         />
         <AvatarFallback className="rounded-lg">{initials}</AvatarFallback>
       </Avatar>
-      <div className="grid flex-1 w-4/5 text-sm leading-tight text-left">
+      <div className="grid w-4/5 flex-1 text-left text-sm leading-tight">
         <span className="truncate font-medium">{session?.user.name}</span>
         <span className="truncate text-xs opacity-80">{session?.user.email}</span>
       </div>

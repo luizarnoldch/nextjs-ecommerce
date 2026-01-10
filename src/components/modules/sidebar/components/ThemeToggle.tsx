@@ -17,17 +17,9 @@ const ThemeToggle = () => {
   return (
     <div className="flex items-center gap-2 px-2">
       {isDark ? (
-        <MoonIcon
-          className={`
-          size-4 transition-transform 
-          ${isDark ? "scale-100 rotate-0" : "scale-0 rotate-90"}`}
-        />
+        <MoonIcon className={`size-4 transition-transform ${isDark ? "rotate-0 scale-100" : "rotate-90 scale-0"}`} />
       ) : (
-        <Sun
-          className={`
-            size-4 transition-transform 
-            ${isDark ? "scale-0 -rotate-90" : "scale-100 rotate-0"}`}
-        />
+        <Sun className={`size-4 transition-transform ${isDark ? "-rotate-90 scale-0" : "rotate-0 scale-100"}`} />
       )}
       <Switch
         id="theme-toggle"
