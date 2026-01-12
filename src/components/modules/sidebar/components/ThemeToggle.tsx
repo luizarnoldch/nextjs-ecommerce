@@ -26,7 +26,7 @@ const ThemeToggle = () => {
         checked={isDark}
         onCheckedChange={handleToggle}
         aria-label="Toggle theme"
-        className="h-6 w-12"
+        className=""
       />
 
       <Label

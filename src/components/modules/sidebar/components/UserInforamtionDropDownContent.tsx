@@ -11,10 +11,10 @@ const UserInforamtionDropDownContent = ({ children }: UserInforamtionDropDownCon
   const { isMobile } = useSidebar()
   return (
     <DropdownMenuContent
-      className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
+      className="rounded-lg"
       side={isMobile ? "bottom" : "right"}
       align="end"
-      sideOffset={4}
+      sideOffset={isMobile ? 4 : 0}
     >
       {children}
     </DropdownMenuContent>

@@ -12,6 +12,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem
 } from "@/components/ui/sidebar"
+import Link from "next/link"
 
 // Define the shape of sub-items
 interface SidebarSubItem {
@@ -47,6 +48,7 @@ const items: SidebarItem[] = [
     isActive: false,
     items: [
       { title: "Gallery", url: "/dashboard/products" },
+      { title: "Categories", url: "/dashboard/categories" },
       { title: "New Products", url: "/dashboard/products/create" }
     ]
   },
@@ -103,9 +105,9 @@ const SidebarDashboardContent = () => {
                       {item.items?.map(subItem => (
                         <SidebarMenuSubItem key={subItem.title}>
                           <SidebarMenuSubButton asChild>
-                            <a href={subItem.url}>
+                            <Link href={subItem.url} prefetch>
                               <span>{subItem.title}</span>
-                            </a>
+                            </Link>
                           </SidebarMenuSubButton>
                         </SidebarMenuSubItem>
                       ))}

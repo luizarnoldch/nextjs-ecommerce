@@ -16,7 +16,6 @@ import {
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
 import { type ReactNode, useId, useState } from "react"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { cn } from "@/lib/utils"
 import TableFilters from "./table-filters"
 import TablePagination from "./table-pagination"
 
@@ -107,9 +106,9 @@ function GenericTable<T>({
                     className="h-11"
                   >
                     {header.isPlaceholder ? null : header.column.getCanSort() ? (
-                      <div
-                        role="button"
-                        className={cn("flex h-full cursor-pointer select-none items-center justify-between gap-2")}
+                      <button
+                        type="button"
+                        className={"flex h-full w-full cursor-pointer select-none items-center justify-between gap-2"}
                         onClick={header.column.getToggleSortingHandler()}
                       >
                         {header.column.columnDef.header instanceof Function
@@ -131,7 +130,7 @@ function GenericTable<T>({
                             />
                           )
                         }[header.column.getIsSorted() as string] ?? null}
-                      </div>
+                      </button>
                     ) : header.column.columnDef.header instanceof Function ? (
                       header.column.columnDef.header(header.getContext())
                     ) : (

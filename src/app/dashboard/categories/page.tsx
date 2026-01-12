@@ -1,5 +1,9 @@
+import CategoriesView from "@/components/modules/categories/templates/categories-view"
+
 const CategoriesPage = () => {
-  return <div>CategoriesPage</div>
+  return (
+    <CategoriesView />
+  )
 }
 
 export default CategoriesPage

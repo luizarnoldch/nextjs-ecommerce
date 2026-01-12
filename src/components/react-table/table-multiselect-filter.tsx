@@ -52,7 +52,7 @@ const TableMultiSelectFilter = ({ label, options, selectedValues, onChange }: Ta
         </Button>
       </PopoverTrigger>
       <PopoverContent
-        className="w-auto min-w-[9rem] p-3"
+        className="w-auto min-w-36 p-3"
         align="start"
       >
         <div className="space-y-3">
