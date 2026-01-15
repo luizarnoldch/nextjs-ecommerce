@@ -1,7 +1,9 @@
-import { redirect } from "next/navigation"
+import HomeView from "@/components/landing-modules/home-page/home-view"
 
 const HomePage = () => {
-  redirect("/sign-in")
+  return (
+    <HomeView />
+  )
 }
 
 export default HomePage

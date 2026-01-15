@@ -2,6 +2,11 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/sonner"
+import { TRPCReactProvider } from "@/trpc/client"
+
+import { Analytics } from "@vercel/analytics/next"
+import { AuthProvider } from "@/components/landing-modules/lib/auth-context"
+import { CartProvider } from "@/components/landing-modules/lib/cart-context"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,15 +25,22 @@ export default function RootLayout({
     >
       <head />
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <Toaster />
-        </ThemeProvider>
+        <TRPCReactProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <AuthProvider>
+              <CartProvider>
+                {children}
+                <Analytics />
+              </CartProvider>
+            </AuthProvider>
+            <Toaster />
+          </ThemeProvider>
+        </TRPCReactProvider>
       </body>
     </html>
   )
