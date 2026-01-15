@@ -1,4 +1,4 @@
-import CategoriesView from "@/components/app-modules/categories/templates/categories-view"
+import CategoriesView from "@/components/landing-modules/categories/categories-viewt"
 
 const CategoriesPage = () => {
   return (

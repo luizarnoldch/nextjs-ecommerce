@@ -3,7 +3,26 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import ResponsiveDialog from "@/components/modules/shared/responsive-dialog"
+import ResponsiveDialog from "@/components/app-modules/shared/responsive-dialog"
+import { PlusIcon } from "lucide-react"
+
+const CreateCategoryButton = ({ isOpen, onOpenChange }: CreateCategoryDialogProps) => {
+  return (
+    <Button
+      type="button"
+      className="p-4 border rounded-lg hover:bg-accent transition-colors"
+      variant="outline"
+      onClick={() => onOpenChange(true)}
+    >
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <PlusIcon className="w-5 h-5 text-muted-foreground" />
+          <span className="text-sm font-medium">Create New Category</span>
+        </div>
+      </div>
+    </Button>
+  )
+}
 
 type CreateCategoryDialogProps = {
   isOpen: boolean
@@ -27,6 +46,7 @@ const CreateCategoryDialog = ({ isOpen, onOpenChange, onCreate }: CreateCategory
       title="Create Category"
       description="Add a new category to your store. Click save when you're done."
       size="md"
+      trigger={<CreateCategoryButton isOpen={isOpen} onOpenChange={onOpenChange} onCreate={onCreate} />}
     >
       <div className="grid gap-4 py-4">
         <div className="grid gap-2">

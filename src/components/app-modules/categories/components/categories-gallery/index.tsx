@@ -5,6 +5,7 @@ import CategoriesToolbar from "./categories-toolbar"
 import CategoryCard from "./category-card"
 import CreateCategoryCard from "./create-category-card"
 import { Category } from "./types"
+import CreateCategoryDialog from "./create-category-dialog"
 
 // Initial mock data
 const INITIAL_CATEGORIES: Category[] = [
@@ -63,10 +64,17 @@ const CategoriesGallery = () => {
       </div>
 
       {/* Toolbar Section */}
-      <CategoriesToolbar
-        searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
-      />
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <CategoriesToolbar
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+        />
+        <CreateCategoryDialog
+          isOpen={isDialogOpen}
+          onCreate={handleCreateCategory}
+          onOpenChange={setIsDialogOpen}
+        />
+      </div>
 
       {/* Gallery Grid */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

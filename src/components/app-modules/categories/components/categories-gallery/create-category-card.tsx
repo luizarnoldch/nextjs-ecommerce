@@ -8,7 +8,7 @@ type CreateCategoryCardProps = {
 const CreateCategoryCard = ({ onClick }: CreateCategoryCardProps) => {
   return (
     <Card
-      className="group relative flex h-[280px] cursor-pointer flex-col items-center justify-center border-dashed border-2 hover:border-primary/50 hover:bg-muted/50 transition-colors"
+      className="group relative flex h-[280px] cursor-pointer flex-col items-center justify-center border-dashed border-2 hover:border-primary/50 hover:bg-muted/50 transition-colors p-0 m-0"
       onClick={onClick}
     >
       <div className="flexComponent flex h-16 w-16 items-center justify-center rounded-full bg-muted group-hover:bg-background transition-colors">

@@ -1,5 +1,5 @@
-import SidebarDashboardInset from "@/components/modules/sidebar/components/SidebarDashboardInset"
-import SidebarDashboard from "@/components/modules/sidebar/templates/SidebarDashboard"
+import SidebarDashboardInset from "@/components/app-modules/sidebar/components/SidebarDashboardInset"
+import SidebarDashboard from "@/components/app-modules/sidebar/templates/SidebarDashboard"
 import { ThemeProvider } from "@/components/theme-provider"
 import { SidebarProvider } from "@/components/ui/sidebar"
 

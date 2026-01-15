@@ -1,4 +1,4 @@
-import NewProduct from "@/components/modules/products/templates/products-view"
+import NewProduct from "@/components/app-modules/products/templates/products-view"
 
 const ProductsCreation = () => {
   return <NewProduct />
