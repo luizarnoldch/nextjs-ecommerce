@@ -27,11 +27,6 @@ const items: SidebarItem[] = [
     url: "/dashboard",
     icon: HomeIcon,
     isActive: false,
-    subitems: [
-      { title: "Analytics", url: "/dashboard" },
-      { title: "Starred", url: "#" },
-      { title: "Settings", url: "#" },
-    ],
   },
   {
     title: "Products",
@@ -49,24 +44,13 @@ const items: SidebarItem[] = [
     url: "#",
     icon: BookOpen,
     isActive: false,
-    subitems: [
-      { title: "Introduction", url: "#" },
-      { title: "Get Started", url: "#" },
-      { title: "Tutorials", url: "#" },
-      { title: "Changelog", url: "#" },
-    ],
   },
   {
     title: "Settings",
     url: "#",
     icon: Settings2,
     isActive: false,
-    subitems: [
-      { title: "General", url: "#" },
-      { title: "Team", url: "#" },
-      { title: "Billing", url: "#" },
-      { title: "Limits", url: "#" },
-    ],
+    
   },
 ];
 
