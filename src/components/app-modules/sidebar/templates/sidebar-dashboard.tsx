@@ -10,7 +10,7 @@ const SidebarDashboard = (props: SidebarDashboardProps) => {
   return (
     <Sidebar collapsible="icon" {...props}>
       <aside className="flex flex-col h-full">
-        {/* <SidebarDashboardHeader /> */}
+        <SidebarDashboardHeader />
         <SidebarDashboardContent />
         <SidebarDashboardFooter />
       </aside>

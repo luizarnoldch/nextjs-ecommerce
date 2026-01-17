@@ -1,27 +1,23 @@
-import { SidebarHeader, SidebarMenu, SidebarMenuItem } from "@/components/ui/sidebar"
+import { SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar"
+import { StarIcon } from "lucide-react"
+import Link from "next/link"
 
 const SidebarDashboardHeader = () => {
   return (
     <SidebarHeader>
       <SidebarMenu>
         <SidebarMenuItem>
-          {/* <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <SidebarMenuButton>
-                Select Workspace
-                <ChevronDown className="ml-auto" />
-              </SidebarMenuButton>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-[12rem] right-0">
-              <DropdownMenuItem>
-                <span>Acme Inc</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <span>Acme Corp.</span>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu> */}
-          <h3 className="text-center font-semibold text-2xl">Atomic Ecommerce</h3>
+          <SidebarMenuButton size="lg" className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
+            <Link href="/dashboard" className="flex items-center gap-2">
+              <div className="flex aspect-square size-8 items-center justify-center rounded-lg">
+                <StarIcon className="size-4" />
+              </div>
+              <div className="grid flex-1 text-left text-sm leading-tight">
+                <span className="truncate font-medium">Atomic Ecommerce</span>
+                <span className="truncate text-xs">Dashboard</span>
+              </div>
+            </Link>
+          </SidebarMenuButton>
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarHeader>

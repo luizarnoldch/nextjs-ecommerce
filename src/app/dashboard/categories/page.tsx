@@ -1,9 +1,9 @@
 import CategoriesView from "@/components/app-modules/categories/templates/categories-view"
 
-const CategoriesPage = () => {
+const DashboardCategoriesPage = () => {
   return (
     <CategoriesView />
   )
 }
 
-export default CategoriesPage
+export default DashboardCategoriesPage

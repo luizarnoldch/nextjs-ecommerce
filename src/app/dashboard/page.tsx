@@ -1,5 +1,7 @@
+import HomeView from "@/components/app-modules/home/templates/home-view"
+
 const DashboardPage = () => {
-  return <div>DashboardPage</div>
+  return <HomeView />
 }
 
 export default DashboardPage
