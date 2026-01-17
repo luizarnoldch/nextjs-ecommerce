@@ -1,5 +1,6 @@
 "use client"
 
+import { ReactNode } from "react"
 import { usePathname } from "next/navigation"
 import {
   Breadcrumb,
@@ -13,7 +14,7 @@ import { Separator } from "@/components/ui/separator"
 import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar"
 
 type SidebarDashboardInsetProps = {
-  children?: React.ReactNode
+  children?: ReactNode
 }
 
 const SidebarDashboardInset = ({ children }: SidebarDashboardInsetProps) => {

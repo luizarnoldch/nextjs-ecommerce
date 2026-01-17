@@ -10,10 +10,10 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { SidebarMenuButton } from "@/components/ui/sidebar"
 
-import LogoutButton from "./LogoutButton"
-import ThemeToggle from "./ThemeToggle"
+import LogoutButton from "./log-out-button"
+import ThemeToggle from "./theme-toggle"
 import UserInforamtionDropDownContent from "./UserInforamtionDropDownContent"
-import UserInformation from "./UserInformation"
+import UserInformation from "../user-information"
 
 const UserInformationDropDown = async () => {
   return (

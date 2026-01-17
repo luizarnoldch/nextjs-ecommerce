@@ -60,7 +60,7 @@ export function FeaturedHero() {
           {/* Right Image */}
           <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/premium-tech-home-products-elegant-modern.jpg"
+              src="/assets/hero/hero.png"
               alt="Premium products showcase"
               fill
               className="object-cover"
